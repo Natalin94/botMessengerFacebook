@@ -2,7 +2,6 @@ import os
 import sys
 import json
 from datetime import datetime
-
 import requests
 from flask import Flask, request
 
@@ -31,6 +30,7 @@ def webhook():
 
     if data["object"] == "page":
 
+        punto = {'1': 1245}
         for entry in data["entry"]:
             for messaging_event in entry["messaging"]:
 
@@ -41,7 +41,7 @@ def webhook():
                     message_text = messaging_event["message"]["text"]  # the message's text
 
                     if message_text == "Hola":
-                        send_message(sender_id, "Hola, bienvenida!")
+                        send_message(sender_id, punto['1'])
                     else:
                         send_message(sender_id, "No entiendo!")
 
