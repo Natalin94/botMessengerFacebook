@@ -41,12 +41,10 @@ def webhook():
                     message_text = messaging_event["message"]["text"]  # the message's text
 
                     if punto.has_key(message_text) :
-                        send_message(sender_id, "Si esta")
+                        send_message(sender_id, punto[message_text])
 
-                    if message_text == "Hola":
-                        send_message(sender_id, punto["1"])
                     else:
-                        send_message(sender_id, "No entiendo!")
+                        send_message(sender_id, "Lo siento, el panel no se encuentra!")
 
                 if messaging_event.get("delivery"):  # delivery confirmation
                     pass
