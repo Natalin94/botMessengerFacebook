@@ -30,7 +30,7 @@ def webhook():
 
     if data["object"] == "page":
 
-        punto = {'1': 1245}
+        punto = {"1": 1245}
         for entry in data["entry"]:
             for messaging_event in entry["messaging"]:
 
@@ -40,9 +40,11 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
 
+                    if punto.has_key(message_text) :
+                        send_message(sender_id, "Si esta")
 
                     if message_text == "Hola":
-                        send_message(sender_id, punto['1'])
+                        send_message(sender_id, punto["1"])
                     else:
                         send_message(sender_id, "No entiendo!")
 
