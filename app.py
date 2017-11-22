@@ -30,7 +30,7 @@ def webhook():
 
     if data["object"] == "page":
 
-        punto = {"1": 1245}
+        punto = {"1": 1245, "2": 7890, "3":8764}
         for entry in data["entry"]:
             for messaging_event in entry["messaging"]:
 
@@ -41,10 +41,10 @@ def webhook():
                     message_text = messaging_event["message"]["text"]  # the message's text
 
                     if punto.has_key(message_text) :
-                        send_message(sender_id, punto[message_text])
+                        send_message(sender_id, "La energia producida es: ",punto[message_text])
 
                     else:
-                        send_message(sender_id, "Lo siento, el panel no se encuentra!")
+                        send_message(sender_id, "Lo siento, el panel no se encuentra registrado!")
 
                 if messaging_event.get("delivery"):  # delivery confirmation
                     pass
