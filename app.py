@@ -40,12 +40,12 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
 
-                    if materias.get(message_text) != None:
+                    if punto.get(message_text) != None:
                         send_message(sender_id, "Si está")
 
                     if message_text == "Hola":
                         send_message(sender_id, punto['1'])
-                        
+
                     else:
                         send_message(sender_id, "No entiendo!")
 
