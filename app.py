@@ -4,6 +4,7 @@ import json
 from datetime import datetime
 import requests
 from flask import Flask, request
+import psycopg2
 
 app = Flask(__name__)
 
