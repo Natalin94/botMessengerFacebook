@@ -57,7 +57,6 @@ def webhook():
                     message_text = messaging_event["message"]["text"]  # the message's text
 
                     if punto.has_key(message_text) :
-                        #send_message(sender_id, punto[message_text])
                         send_message(sender_id, rows)
 
                     else:
