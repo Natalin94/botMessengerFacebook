@@ -9,6 +9,14 @@ import psycopg2
 app = Flask(__name__)
 
 
+conn = psycopg2.connect(
+    database="ddt9egg4knuolm",
+    user="vlhmhmtawylynb",
+    password="cbfcf93b9fc74c615b86facc39e711f1f18f05b25493b376d29c8a0e69ced2c9",
+    host="ec2-54-83-35-31.compute-1.amazonaws.com",
+    port="5432"
+)
+
 @app.route('/', methods=['GET'])
 def verify():
     # when the endpoint is registered as a webhook, it must echo back
