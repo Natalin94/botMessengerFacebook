@@ -57,7 +57,7 @@ def webhook():
                     message_text = messaging_event["message"]["text"]  # the message's text
 
                     if punto.has_key(message_text) :
-                        send_message(sender_id, rows)
+                        send_message(sender_id, "hola")
 
                     else:
                         send_message(sender_id, "Lo siento, el panel no se encuentra registrado!")
