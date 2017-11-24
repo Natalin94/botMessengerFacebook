@@ -17,6 +17,13 @@ conn = psycopg2.connect(
     port="5432"
 )
 
+cur = conn.cursor()
+cur.execute("select energia from datosPaneles where id = 1")
+rows=cur.fetchall()
+print (rows)
+conn.close()
+
+
 @app.route('/', methods=['GET'])
 def verify():
     # when the endpoint is registered as a webhook, it must echo back
