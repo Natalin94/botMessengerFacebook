@@ -23,7 +23,7 @@ flask-restful-url-generator==0.0.4
 Flask-Script==2.0.5
 Flask-SQLAlchemy==2.1
 flasker==0.1.45
-flower==0.9.1
+flower==1.2.0
 futures==3.1.1
 itsdangerous==0.24
 Jinja2==2.8
